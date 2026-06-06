@@ -12,4 +12,10 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    build: {
+      // Client-side only build for static hosting (no SSR)
+      ssr: false,
+    },
+  },
 });
